@@ -17,5 +17,5 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: npm ci
         env: # Or as an environment variable
-          super_secret: ${{ secrets.SuperSecret }}
+          ACTION_TEST_SECRET: ${{ secrets.ACTION_TEST_SECRET }}
       - run: npm test
