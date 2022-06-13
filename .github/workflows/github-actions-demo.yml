@@ -18,6 +18,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: npm ci
+      - run: npm test
       - run: ACTION_TEST_SECRET="${{ secrets.ACTION_TEST_SECRET }}" npm test
       - run: ACTION_TEST_SECRET="$ACTION_TEST_SECRET" npm test
       - run: npm test
