@@ -15,7 +15,10 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "Secret 1 ${{ secrets.TEST_SECRET }}."
-      - run: echo "Secret 2 ${{ secrets.ACTION_TEST_SECRET }}."
+      - run: echo "Secret 1"
+      - run: echo ${{ secrets.TEST_SECRET }}
+      - run: echo "Secret 2"
+      - run: echo ${{ secrets.ACTION_TEST_SECRET }}
+
       # - run: npm ci
       # - run: npm run test
