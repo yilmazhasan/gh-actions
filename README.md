@@ -1,2 +1,2 @@
 # GH Actions
-This repo is for learning github-actions
+This repo is a sandbox to learn github-actions
