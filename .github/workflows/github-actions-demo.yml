@@ -2,6 +2,9 @@ name: GitHub Actions Demo
 on: [push]
 env: # Or as an environment variable
   ACTION_TEST_SECRET: ${{ secrets.ACTION_TEST_SECRET }}
+  ANOTHER_VAR: 'hasan'
+  STILL_ANOTHER_VAR: yilmaz
+  LAST_ANOTHER_VAR: 12345
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
