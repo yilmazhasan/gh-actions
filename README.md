@@ -1,3 +1,2 @@
 # GH Actions
-This repo is for github-actions
-
+This repo is for learning github-actions
