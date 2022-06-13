@@ -1,5 +1,7 @@
 name: GitHub Actions Demo
 on: [push]
+env: # Or as an environment variable
+  ACTION_TEST_SECRET: ${{ secrets.ACTION_TEST_SECRET }}
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -16,6 +18,4 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: npm ci
-        env: # Or as an environment variable
-          ACTION_TEST_SECRET: ${{ secrets.ACTION_TEST_SECRET }}
-      - run: ACTION_TEST_SECRET=$ACTION_TEST_SECRET npm test
+      - run: ACTION_TEST_SECRET="$ACTION_TEST_SECRET" npm test
