@@ -18,5 +18,4 @@ jobs:
       - run: npm ci
         env: # Or as an environment variable
           ACTION_TEST_SECRET: ${{ secrets.ACTION_TEST_SECRET }}
-      - run: |
-          "$env:ACTION_TEST_SECRET" npm test
+      - run: ACTION_TEST_SECRET=$ACTION_TEST_SECRET npm test
